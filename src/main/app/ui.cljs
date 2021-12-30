@@ -12,7 +12,7 @@
 
 (def ui-counter (compo/factory Counter))
 
-(defsc Root [_ {:keys [counters]}]
-  {:query [{:counters (compo/get-query Counter)}]
-   :initial-state  {:counters {:id 1 :count 0}}}
-  (dom/div (ui-counter counters)))
+(defsc Root [_ {:keys [counter]}]
+  {:query [{:counter (compo/get-query Counter)}]
+   :initial-state (fn [_] {:counter (compo/get-initial-state Counter {:id 1 :count 0})})}
+  (dom/div (ui-counter counter)))
