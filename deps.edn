@@ -1,0 +1,5 @@
+{:paths   ["src/main" "resources"]
+ :deps    {com.fulcrologic/fulcro {:mvn/version "3.5.9"}}
+ :aliases {:dev {:extra-paths ["src/dev"]
+                 :extra-deps {thheller/shadow-cljs      {:mvn/version "2.16.9"}
+                              binaryage/devtools        {:mvn/version "1.0.4"}}}}}
