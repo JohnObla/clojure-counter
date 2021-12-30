@@ -1,7 +1,7 @@
 (ns app.ui
- (:require
-  [com.fulcrologic.fulcro.components :as compo :refer [defsc]]
-  [com.fulcrologic.fulcro.dom :as dom]))
+  (:require
+   [com.fulcrologic.fulcro.components :as compo :refer [defsc]]
+   [com.fulcrologic.fulcro.dom :as dom]))
 
 (defsc Counter [_ {:counter/keys [count]}]
   {:query [:counter/id :counter/count]
